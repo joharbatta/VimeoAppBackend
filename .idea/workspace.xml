@@ -2,9 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="a59ad958-9003-4092-bf71-6ef93e633055" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/videohoster-api/src/main/java/com/upgrad/videohoster/api/controller/SignupController.java" beforeDir="false" afterPath="$PROJECT_DIR$/videohoster-api/src/main/java/com/upgrad/videohoster/api/controller/SignupController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/videohoster-service/src/main/java/com/upgrad/videohoster/service/business/SignupBusinessService.java" beforeDir="false" afterPath="$PROJECT_DIR$/videohoster-service/src/main/java/com/upgrad/videohoster/service/business/SignupBusinessService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/videohoster-service/src/main/java/com/upgrad/videohoster/service/dao/UserDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/videohoster-service/src/main/java/com/upgrad/videohoster/service/dao/UserDao.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -49,6 +47,12 @@
     <property name="aspect.path.notification.shown" value="true" />
     <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1587045112994" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$/videohoster-api/src/main/resources" />
+    <property name="node.js.detected.package.eslint" value="true" />
+    <property name="node.js.detected.package.tslint" value="true" />
+    <property name="node.js.path.for.package.eslint" value="project" />
+    <property name="node.js.path.for.package.tslint" value="project" />
+    <property name="node.js.selected.package.eslint" value="(autodetect)" />
+    <property name="node.js.selected.package.tslint" value="(autodetect)" />
   </component>
   <component name="RecentsManager">
     <key name="CopyClassDialog.RECENTS_KEY">
@@ -94,7 +98,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1587033804529</updated>
-      <workItem from="1587826107557" duration="1077000" />
+      <workItem from="1587826107557" duration="2487000" />
     </task>
     <servers />
   </component>
@@ -102,22 +106,22 @@
     <option name="version" value="1" />
   </component>
   <component name="WindowStateProjectService">
-    <state width="916" height="396" key="GridCell.Tab.0.bottom" timestamp="1587827204507">
+    <state width="916" height="396" key="GridCell.Tab.0.bottom" timestamp="1587830094021">
       <screen x="0" y="0" width="1920" height="1050" />
     </state>
-    <state width="916" height="396" key="GridCell.Tab.0.bottom/0.0.1920.1050@0.0.1920.1050" timestamp="1587827204507" />
-    <state width="916" height="396" key="GridCell.Tab.0.center" timestamp="1587827204507">
+    <state width="916" height="396" key="GridCell.Tab.0.bottom/0.0.1920.1050@0.0.1920.1050" timestamp="1587830094021" />
+    <state width="916" height="396" key="GridCell.Tab.0.center" timestamp="1587830094021">
       <screen x="0" y="0" width="1920" height="1050" />
     </state>
-    <state width="916" height="396" key="GridCell.Tab.0.center/0.0.1920.1050@0.0.1920.1050" timestamp="1587827204507" />
-    <state width="916" height="396" key="GridCell.Tab.0.left" timestamp="1587827204506">
+    <state width="916" height="396" key="GridCell.Tab.0.center/0.0.1920.1050@0.0.1920.1050" timestamp="1587830094021" />
+    <state width="916" height="396" key="GridCell.Tab.0.left" timestamp="1587830094021">
       <screen x="0" y="0" width="1920" height="1050" />
     </state>
-    <state width="916" height="396" key="GridCell.Tab.0.left/0.0.1920.1050@0.0.1920.1050" timestamp="1587827204506" />
-    <state width="916" height="396" key="GridCell.Tab.0.right" timestamp="1587827204507">
+    <state width="916" height="396" key="GridCell.Tab.0.left/0.0.1920.1050@0.0.1920.1050" timestamp="1587830094021" />
+    <state width="916" height="396" key="GridCell.Tab.0.right" timestamp="1587830094021">
       <screen x="0" y="0" width="1920" height="1050" />
     </state>
-    <state width="916" height="396" key="GridCell.Tab.0.right/0.0.1920.1050@0.0.1920.1050" timestamp="1587827204507" />
+    <state width="916" height="396" key="GridCell.Tab.0.right/0.0.1920.1050@0.0.1920.1050" timestamp="1587830094021" />
     <state x="136" y="245" key="run.anything.popup" timestamp="1587826993572">
       <screen x="0" y="0" width="1920" height="1050" />
     </state>
