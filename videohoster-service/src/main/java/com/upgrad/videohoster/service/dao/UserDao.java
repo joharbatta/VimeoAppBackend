@@ -17,18 +17,19 @@ public class UserDao {
 
     public UserEntity createUser(UserEntity userEntity) {
         entityManager.persist(userEntity);
+        return userEntity;
     }
 
-    public UserEntity getUserByEmail(final String email) {
-    }
-
-    public UserAuthTokenEntity createAuthToken(final UserAuthTokenEntity userAuthTokenEntity) {
-        entityManager.persist(userAuthTokenEntity);
-    }
-
-    public void updateUser(final UserEntity updatedUserEntity) {
-        entityManager.merge(updatedUserEntity);
-    }
+//    public UserEntity getUserByEmail(final String email) {
+//    }
+//
+//    public UserAuthTokenEntity createAuthToken(final UserAuthTokenEntity userAuthTokenEntity) {
+//        entityManager.persist(userAuthTokenEntity);
+//    }
+//
+//    public void updateUser(final UserEntity updatedUserEntity) {
+//        entityManager.merge(updatedUserEntity);
+//    }
 
 
 }
