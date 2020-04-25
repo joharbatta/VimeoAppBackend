@@ -1,11 +1,8 @@
 com\upgrad\videohoster\api\model\AuthorizedUserResponse.class
 com\upgrad\videohoster\api\config\SwaggerConfiguration.class
-com\upgrad\videohoster\api\exception\RestExceptionHandler.class
 io\swagger\configuration\HomeController.class
-com\upgrad\videohoster\api\controller\VideoUploadController.class
 com\upgrad\videohoster\api\model\SignupUserResponse.class
 io\swagger\api\ApiResponseMessage.class
-com\upgrad\videohoster\api\controller\AuthenticationController.class
 com\upgrad\videohoster\api\controller\SignupController.class
 com\upgrad\videohoster\api\model\UpdateVideoResponse.class
 io\swagger\Swagger2SpringBoot.class
@@ -19,7 +16,6 @@ com\upgrad\videohoster\api\model\VideoDetailsResponse.class
 io\swagger\RFC3339DateFormat.class
 com\upgrad\videohoster\api\model\VideoUploadResponse.class
 io\swagger\api\ApiException.class
-com\upgrad\videohoster\api\controller\AdminController.class
 io\swagger\configuration\SwaggerDocumentationConfig.class
 com\upgrad\videohoster\api\VideoHosterApplication.class
 com\upgrad\videohoster\api\model\ErrorResponse.class

@@ -21,6 +21,6 @@ public class SignupBusinessService {
         String[] encryptedText = passwordCryptographyProvider.encrypt(userEntity.getPassword());
         userEntity.setSalt(encryptedText[0]);
         userEntity.setPassword(encryptedText[1]);
-
+        return null;
     }
 }
