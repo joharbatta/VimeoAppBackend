@@ -1,0 +1,182 @@
+{
+  "swagger": "2.0",
+  "info": {
+    "title": "Video Upload API",
+    "version": "1.0.0",
+    "description": "API of Video upload"  },
+
+  "host": "video.io",
+  "schemes": [
+    "http",
+    "https"
+  ],
+  "basePath": "/api/v1/upload",
+  "tags": [
+    {
+      "name": "API#002 Upload",
+      "description": "All operations marked with 'API#002 Upload' are relevant to user upload use case"
+    }
+  ],
+  "paths": {
+    "/upload": {
+      "x-swagger-router-controller": "api",
+      "post": {
+        "tags": [
+          "API#002 Upload"
+        ],
+        "operationId": "uploadVideo",
+        "summary": "Upload Video",
+        "consumes": [
+          "application/json"
+        ],
+        "produces": [
+          "application/json"
+        ],
+        "parameters": [
+          {
+            "$ref": "#/parameters/ClientId"
+          },
+          {
+            "in": "body",
+            "name": "VideoUploadRequest",
+            "description": "Request containing user videoupload information",
+            "required": true,
+            "schema": {
+              "$ref": "#/definitions/VideoUploadRequest"
+            }
+          }
+        ],
+        "responses": {
+          "201": {
+            "description": "CREATED - Video has been uploaded successfully",
+            "headers": {
+              "request-id": {
+                "type": "string",
+                "description": "Used as correlation id while tracing for the request in the backend"
+              },
+              "location": {
+                "type": "string",
+                "description": "Location of the new resource which was created by this request"
+              }
+            },
+            "schema": {
+              "$ref": "#/definitions/VideoUploadResponse"
+            }
+          },
+          "400": {
+            "description": "BAD REQUEST - server cannot or will not process the request due to something that is perceived to be a client error (e.g., malformed request syntax, mandatory elements are missing)",
+            "headers": {
+              "request-id": {
+                "type": "string",
+                "description": "Used as correlation id while tracing for the request in the backend"
+              }
+            }
+          },
+          "401": {
+            "description": "UNAUTHORIZED - user has provided wrong credentials",
+            "headers": {
+              "request-id": {
+                "type": "string",
+                "description": "Used as correlation id while tracing for the request in the backend"
+              }
+            }
+          },
+          "403": {
+            "description": "FORBIDDEN - request has not been applied because client application has no permission to perform action",
+            "headers": {
+              "request-id": {
+                "type": "string",
+                "description": "Used as correlation id while tracing for the request in the backend"
+              }
+            }
+          },
+          "422": {
+            "description": "UNPROCESSABLE ENTITY - request was well-formed but server unable to process due to semantic errors",
+            "headers": {
+              "request-id": {
+                "type": "string",
+                "description": "Used as correlation id while tracing for the request flow to the backend"
+              }
+            }
+          },
+          "500": {
+            "description": "INTERNAL SERVER ERROR - server encountered an unexpected condition that prevented it from fulfilling the request.",
+            "headers": {
+              "request-id": {
+                "type": "string",
+                "description": "Used as correlation id while tracing for the request in the backend"
+              }
+            }
+          }
+        }
+      }
+    }
+  },
+  "parameters": {
+    "ClientId": {
+      "name": "client-id",
+      "type": "string",
+      "in": "header",
+      "required": true,
+      "description": "Mandatory request header about the caller of this API. Only an authorized clients are allowed to this API."
+    },
+      "Authorization": {
+        "name": "authorization",
+        "type": "string",
+        "in": "header",
+        "required": true,
+        "description": "Mandatory user credentials in Base64 encoded format. Refer to the #/components/securitySchemes for more information on this header."
+      }
+  },
+  "definitions": {
+    "VideoUploadRequest": {
+      "type": "object",
+      "properties": {
+      "video":{
+        "type":"string",
+        "description":"This is video url"
+      },
+
+        "name":{
+          "type":"string",
+          "description":"The name of the video"
+        },
+
+        "description":{
+          "type":"string",
+          "description":"Description of the video"
+        }
+      },
+      "required": [
+        "video",
+        "name",
+        "description"
+      ],
+      "example": {
+        "video":"fdas-fdv-vfc",
+        "name":"my_video",
+        "description":"This video contains my memories"
+      }
+    },
+    "VideoUploadResponse": {
+      "type": "object",
+      "properties": {
+        "id": {
+          "type": "string",
+          "description": "User identifier in a standard UUID format generated by API backend"
+        },
+        "status": {
+          "type": "string"
+        }
+      },
+      "required": [
+        "id",
+        "status"
+      ],
+      "example": {
+        "id": "7d174a25-ba31-45a8-85b4-b06ffc9d5f8f",
+        "status": "not active"
+      }
+    }
+  }
+}
