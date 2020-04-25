@@ -17,7 +17,7 @@ public class UserDao {
 
     public UserEntity createUser(UserEntity userEntity) {
         entityManager.persist(userEntity);
-        return  userEntity;
+        return userEntity;
     }
 
 //    public UserEntity getUserByEmail(final String email) {

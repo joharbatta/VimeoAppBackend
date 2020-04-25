@@ -1,7 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="a59ad958-9003-4092-bf71-6ef93e633055" name="Default Changelist" comment="" />
+    <list default="true" id="a59ad958-9003-4092-bf71-6ef93e633055" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/videohoster-api/src/main/java/com/upgrad/videohoster/api/controller/SignupController.java" beforeDir="false" afterPath="$PROJECT_DIR$/videohoster-api/src/main/java/com/upgrad/videohoster/api/controller/SignupController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/videohoster-service/src/main/java/com/upgrad/videohoster/service/business/SignupBusinessService.java" beforeDir="false" afterPath="$PROJECT_DIR$/videohoster-service/src/main/java/com/upgrad/videohoster/service/business/SignupBusinessService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/videohoster-service/src/main/java/com/upgrad/videohoster/service/dao/UserDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/videohoster-service/src/main/java/com/upgrad/videohoster/service/dao/UserDao.java" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -53,11 +57,11 @@
       <recent name="com.upgrad.videohoster.api.config" />
     </key>
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\johar\Desktop\videohoster-stub\videohoster\videohoster-api\src\main\resources" />
       <recent name="C:\Users\Work\IdeaProjects\videohoster\videohoster-api\src\main\java\com\upgrad\videohoster\api\controller" />
       <recent name="C:\Users\Work\IdeaProjects\videohoster\videohoster-service\src\main\java\com\upgrad\videohoster\service\common" />
       <recent name="C:\Users\Work\IdeaProjects\videohoster\videohoster-service\src\main\java\com\upgrad\videohoster\service\exception" />
       <recent name="C:\Users\Work\IdeaProjects\videohoster\videohoster-service\src\main\java\com\upgrad\videohoster\service\dao" />
-      <recent name="C:\Users\Work\IdeaProjects\videohoster\videohoster-service\src\main\java\com\upgrad\videohoster\service\entity" />
     </key>
   </component>
   <component name="RunManager">
@@ -90,11 +94,33 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1587033804529</updated>
-      <workItem from="1587826107557" duration="558000" />
+      <workItem from="1587826107557" duration="1077000" />
     </task>
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="1" />
+  </component>
+  <component name="WindowStateProjectService">
+    <state width="916" height="396" key="GridCell.Tab.0.bottom" timestamp="1587827204507">
+      <screen x="0" y="0" width="1920" height="1050" />
+    </state>
+    <state width="916" height="396" key="GridCell.Tab.0.bottom/0.0.1920.1050@0.0.1920.1050" timestamp="1587827204507" />
+    <state width="916" height="396" key="GridCell.Tab.0.center" timestamp="1587827204507">
+      <screen x="0" y="0" width="1920" height="1050" />
+    </state>
+    <state width="916" height="396" key="GridCell.Tab.0.center/0.0.1920.1050@0.0.1920.1050" timestamp="1587827204507" />
+    <state width="916" height="396" key="GridCell.Tab.0.left" timestamp="1587827204506">
+      <screen x="0" y="0" width="1920" height="1050" />
+    </state>
+    <state width="916" height="396" key="GridCell.Tab.0.left/0.0.1920.1050@0.0.1920.1050" timestamp="1587827204506" />
+    <state width="916" height="396" key="GridCell.Tab.0.right" timestamp="1587827204507">
+      <screen x="0" y="0" width="1920" height="1050" />
+    </state>
+    <state width="916" height="396" key="GridCell.Tab.0.right/0.0.1920.1050@0.0.1920.1050" timestamp="1587827204507" />
+    <state x="136" y="245" key="run.anything.popup" timestamp="1587826993572">
+      <screen x="0" y="0" width="1920" height="1050" />
+    </state>
+    <state x="136" y="245" key="run.anything.popup/0.0.1920.1050@0.0.1920.1050" timestamp="1587826993572" />
   </component>
 </project>
