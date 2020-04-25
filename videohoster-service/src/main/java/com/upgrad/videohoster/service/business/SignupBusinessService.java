@@ -13,14 +13,14 @@ public class SignupBusinessService {
     @Autowired
     private UserDao userDao;
 
-//    @Autowired
-//    private PasswordCryptographyProvider passwordCryptographyProvider;
+    @Autowired
+    private PasswordCryptographyProvider passwordCryptographyProvider;
 
     @Transactional(propagation = Propagation.REQUIRED)
     public UserEntity signup(UserEntity userEntity) {
-//        String[] encryptedText = passwordCryptographyProvider.encrypt(userEntity.getPassword());
-//        userEntity.setSalt(encryptedText[0]);
-//        userEntity.setPassword(encryptedText[1]);
+        String[] encryptedText = passwordCryptographyProvider.encrypt(userEntity.getPassword());
+        userEntity.setSalt(encryptedText[0]);
+        userEntity.setPassword(encryptedText[1]);
         return userDao.createUser(userEntity);
     }
 }
