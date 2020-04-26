@@ -3,8 +3,11 @@
   <component name="ChangeListManager">
     <list default="true" id="a59ad958-9003-4092-bf71-6ef93e633055" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/videohoster-api/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/videohoster-api/src/main/resources/application.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/videohoster-api/target/classes/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/videohoster-api/target/classes/application.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/videohoster-service/target/classes/com/upgrad/videohoster/service/business/SignupBusinessService.class" beforeDir="false" afterPath="$PROJECT_DIR$/videohoster-service/target/classes/com/upgrad/videohoster/service/business/SignupBusinessService.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/videohoster-service/target/classes/com/upgrad/videohoster/service/dao/UserDao.class" beforeDir="false" afterPath="$PROJECT_DIR$/videohoster-service/target/classes/com/upgrad/videohoster/service/dao/UserDao.class" afterDir="false" />
     </list>
-    <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -47,17 +50,13 @@
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
     <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1587045112994" />
-
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/videohoster-api/src/main/resources" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.tslint" value="true" />
     <property name="node.js.path.for.package.eslint" value="project" />
     <property name="node.js.path.for.package.tslint" value="project" />
     <property name="node.js.selected.package.eslint" value="(autodetect)" />
     <property name="node.js.selected.package.tslint" value="(autodetect)" />
-
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
-
   </component>
   <component name="RecentsManager">
     <key name="CopyClassDialog.RECENTS_KEY">
@@ -72,18 +71,6 @@
       <recent name="C:\Users\Work\IdeaProjects\videohoster\videohoster-service\src\main\java\com\upgrad\videohoster\service\exception" />
       <recent name="C:\Users\Work\IdeaProjects\videohoster\videohoster-service\src\main\java\com\upgrad\videohoster\service\dao" />
     </key>
-  </component>
-  <component name="RunDashboard">
-    <option name="ruleStates">
-      <list>
-        <RuleState>
-          <option name="name" value="ConfigurationTypeDashboardGroupingRule" />
-        </RuleState>
-        <RuleState>
-          <option name="name" value="StatusDashboardGroupingRule" />
-        </RuleState>
-      </list>
-    </option>
   </component>
   <component name="RunManager">
     <configuration name="VideoHosterApplication" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
@@ -127,29 +114,31 @@
       <map>
         <entry key="MAIN">
           <value>
-            <State />
+            <State>
+              <option name="COLUMN_ORDER" />
+            </State>
           </value>
         </entry>
       </map>
     </option>
   </component>
   <component name="WindowStateProjectService">
-    <state width="916" height="396" key="GridCell.Tab.0.bottom" timestamp="1587830094021">
+    <state width="914" height="391" key="GridCell.Tab.0.bottom" timestamp="1587842146814">
       <screen x="0" y="0" width="1920" height="1050" />
     </state>
-    <state width="916" height="396" key="GridCell.Tab.0.bottom/0.0.1920.1050@0.0.1920.1050" timestamp="1587830094021" />
-    <state width="916" height="396" key="GridCell.Tab.0.center" timestamp="1587830094021">
+    <state width="914" height="391" key="GridCell.Tab.0.bottom/0.0.1920.1050@0.0.1920.1050" timestamp="1587842146814" />
+    <state width="914" height="391" key="GridCell.Tab.0.center" timestamp="1587842146814">
       <screen x="0" y="0" width="1920" height="1050" />
     </state>
-    <state width="916" height="396" key="GridCell.Tab.0.center/0.0.1920.1050@0.0.1920.1050" timestamp="1587830094021" />
-    <state width="916" height="396" key="GridCell.Tab.0.left" timestamp="1587830094021">
+    <state width="914" height="391" key="GridCell.Tab.0.center/0.0.1920.1050@0.0.1920.1050" timestamp="1587842146814" />
+    <state width="914" height="391" key="GridCell.Tab.0.left" timestamp="1587842146814">
       <screen x="0" y="0" width="1920" height="1050" />
     </state>
-    <state width="916" height="396" key="GridCell.Tab.0.left/0.0.1920.1050@0.0.1920.1050" timestamp="1587830094021" />
-    <state width="916" height="396" key="GridCell.Tab.0.right" timestamp="1587830094021">
+    <state width="914" height="391" key="GridCell.Tab.0.left/0.0.1920.1050@0.0.1920.1050" timestamp="1587842146814" />
+    <state width="914" height="391" key="GridCell.Tab.0.right" timestamp="1587842146814">
       <screen x="0" y="0" width="1920" height="1050" />
     </state>
-    <state width="916" height="396" key="GridCell.Tab.0.right/0.0.1920.1050@0.0.1920.1050" timestamp="1587830094021" />
+    <state width="914" height="391" key="GridCell.Tab.0.right/0.0.1920.1050@0.0.1920.1050" timestamp="1587842146814" />
     <state x="136" y="245" key="run.anything.popup" timestamp="1587826993572">
       <screen x="0" y="0" width="1920" height="1050" />
     </state>
