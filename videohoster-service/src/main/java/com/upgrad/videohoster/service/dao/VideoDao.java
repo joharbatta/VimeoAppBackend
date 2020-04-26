@@ -27,8 +27,14 @@ public class VideoDao {
         }
     }
 
-//    public VideoEntity getVideo(final String videoUuid) {
-//    }
+    public VideoEntity getVideo(final String videoUuid) {
+
+        try {
+            return entityManager.createNamedQuery("VideoEntityByUuid", VideoEntity.class).setParameter("uuid", videoUuid).getSingleResult();
+        } catch (NoResultException nre) {
+            return null;
+        }
+    }
 //
 //    public VideoEntity getVideoById(final long Id) {
 //    }
