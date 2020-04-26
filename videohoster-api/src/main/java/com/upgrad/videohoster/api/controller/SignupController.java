@@ -39,6 +39,3 @@ public class SignupController {
         return new ResponseEntity<SignupUserResponse>(userResponse, HttpStatus.CREATED);
     }
 }
-
-67b6f124-c357-45a6-b987-31c6fcbe388d
-        eyJraWQiOiJhYzljYWJhNi0wNzNiLTQwY2ItYjVjZi02NDNlOGRiMzhlYzkiLCJ0eXAiOiJKV1QiLCJhbGciOiJIUzUxMiJ9.eyJhdWQiOiJjYWJiODA0Yi02YjU0LTQ3ODQtOWFkZi1iM2JhZGRkZWNkYTciLCJpc3MiOiJodHRwczovL3Byb21hbi5pbyIsImV4cCI6MTU4NzkyMSwiaWF0IjoxNTg3ODkyfQ.hy6y_ZVuQCk9_2YADwfOhVxrqJZJKrU110_Q1J8UcD8Zn8VgNOaOPmNI8d6PRAJnR118BAA2eYLTxZhfWbR-FA

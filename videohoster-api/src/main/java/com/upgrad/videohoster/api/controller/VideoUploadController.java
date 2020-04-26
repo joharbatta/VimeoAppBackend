@@ -35,9 +35,8 @@ public class VideoUploadController {
         videoEntity.setNo_of_likes(0);
         videoEntity.setCreated_at(ZonedDateTime.now());
         videoEntity.setStatus("REGISTERED");
-
         final VideoEntity createdvideoEntity = videoUploadService.upload(videoEntity, authorization);
-        VideoUploadResponse videoUploadResponse = new VideoUploadResponse().id(createdvideoEntity.getUuid()).status("Video SUCCESSFULLY uploaded");
+        VideoUploadResponse videoUploadResponse = new VideoUploadResponse().id(createdvideoEntity.getUuid()).status("Video Successfully Uploaded");
         return new ResponseEntity<VideoUploadResponse>(videoUploadResponse, HttpStatus.CREATED);
     }
 }

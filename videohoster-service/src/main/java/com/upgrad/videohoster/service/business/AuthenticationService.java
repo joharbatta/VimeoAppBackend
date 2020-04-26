@@ -27,7 +27,6 @@ public class AuthenticationService {
         if (userEntity == null) {
             throw new AuthenticationFailedException("ATH-001", "User with email not found");
         }
-
         final String encryptedPassword = CryptographyProvider.encrypt(password, userEntity.getSalt());
         if (encryptedPassword.equals(userEntity.getPassword())) {
             JwtTokenProvider jwtTokenProvider = new JwtTokenProvider(encryptedPassword);
@@ -44,7 +43,8 @@ public class AuthenticationService {
             userDao.updateUser(userEntity);
             userEntity.setLastLoginAt(now);
             return userAuthTokenEntity;
-        } else {
+        }
+        else {
             throw new AuthenticationFailedException("ATH-002", "Password failed");
         }
     }

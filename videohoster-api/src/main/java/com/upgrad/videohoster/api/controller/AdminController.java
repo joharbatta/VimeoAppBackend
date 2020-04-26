@@ -39,7 +39,6 @@ public class AdminController {
     @RequestMapping(method = RequestMethod.PUT, path = "/videos/update/{video_id}", consumes = MediaType.APPLICATION_JSON_UTF8_VALUE, produces = MediaType.APPLICATION_JSON_UTF8_VALUE)
     public ResponseEntity<UpdateVideoResponse> updateVideo(final UpdateVideoRequest updateVideoRequest, @PathVariable("video_id") final long video_id, @RequestHeader("authorization") final String authorization) throws VideoNotFoundException, UnauthorizedException, UserNotSignedInException {
         VideoEntity videoEntity = new VideoEntity();
-
         videoEntity.setVideo(updateVideoRequest.getVideo());
         videoEntity.setId(video_id);
         videoEntity.setName(updateVideoRequest.getName());

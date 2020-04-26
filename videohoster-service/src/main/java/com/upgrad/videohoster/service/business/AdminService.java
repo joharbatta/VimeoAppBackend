@@ -22,25 +22,26 @@ public class AdminService {
 
         UserAuthTokenEntity userAuthTokenEntity = videoDao.getUserAuthToken(authorization);
         if (userAuthTokenEntity == null) {
-            throw new UserNotSignedInException("USR-001", "You are not Signed in, sign in first to get the details of the image");
+            throw new UserNotSignedInException("USR-001", "You are not Signed in, sign in first to get the details of the video file");
         }
 
         String role = userAuthTokenEntity.getUser().getRole();
         if (role.equals("admin")) {
             VideoEntity videoEntity = videoDao.getVideo(videoUuid);
             if (videoEntity == null) {
-                throw new VideoNotFoundException("VID-001", "Video with Uuid not found");
+                throw new VideoNotFoundException("VID-001", "Video with uuid not found");
             }
             return videoEntity;
-        } else
-            throw new UnauthorizedException("ATH-001", "UNAUTHORIZED Access, Entered user is not an admin");
+        } else {
+            throw new UnauthorizedException("ATH-001", "Unauthorized Access, Entered user is not an admin");
+        }
     }
 
     @Transactional(propagation = Propagation.REQUIRED)
     public VideoEntity updateVideo(final VideoEntity videoEntity, final String authorization) throws VideoNotFoundException, UnauthorizedException, UserNotSignedInException {
         UserAuthTokenEntity userAuthTokenEntity = videoDao.getUserAuthToken(authorization);
         if (userAuthTokenEntity == null) {
-            throw new UserNotSignedInException("USR-001", "You are not Signed in, sign in first to update the details of the image");
+            throw new UserNotSignedInException("USR-001", "You are not Signed in, sign in first to update the details of the video file");
         }
         String role = userAuthTokenEntity.getUser().getRole();
         if (role.equals("admin")) {
