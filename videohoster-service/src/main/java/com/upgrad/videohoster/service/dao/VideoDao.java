@@ -35,11 +35,15 @@ public class VideoDao {
             return null;
         }
     }
-//
-//    public VideoEntity getVideoById(final long Id) {
-//    }
-//
-//    public VideoEntity updateVideo(final VideoEntity videoEntity) {
-//        return entityManager.merge(videoEntity);
-//    }
+    public VideoEntity getVideoById(final long Id) {
+        try {
+            return entityManager.createNamedQuery("VideoEntityByid", VideoEntity.class).setParameter("id", Id).getSingleResult();
+        } catch (NoResultException nre) {
+            return null;
+        }
+    }
+
+    public VideoEntity updateVideo(final VideoEntity videoEntity) {
+        return entityManager.merge(videoEntity);
+    }
 }

@@ -19,7 +19,7 @@ public class VideoUploadService {
     public VideoEntity upload(VideoEntity videoEntity, final String authorizationToken) throws UploadFailedException {
         UserAuthTokenEntity userAuthTokenEntity = videoDao.getUserAuthToken(authorizationToken);
         if (userAuthTokenEntity == null) {
-            throw new UploadFailedException("UP-001", "User is not Signed in, sign in to upload an image");
+            throw new UploadFailedException("UP-001", "User is not Signed in, sign in to upload an video");
         }
         videoEntity.setUser_id(userAuthTokenEntity.getUser());
         return videoDao.createVideo(videoEntity);
