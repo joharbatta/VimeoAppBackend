@@ -18,13 +18,13 @@ public class RestExceptionHandler {
                 new ErrorResponse().code(exc.getCode()).message(exc.getErrorMessage()), HttpStatus.UNAUTHORIZED
         );
     }
-//
-//    @ExceptionHandler(UploadFailedException.class)
-//    public ResponseEntity<ErrorResponse> uploadFailedException(UploadFailedException exc, WebRequest request) {
-////        return new ResponseEntity<ErrorResponse>(
-////                new ErrorResponse().code(exc.getCode()).message(exc.getErrorMessage()), HttpStatus.UNAUTHORIZED
-////        );
-//    }
+
+    @ExceptionHandler(UploadFailedException.class)
+    public ResponseEntity<ErrorResponse> uploadFailedException(UploadFailedException exc, WebRequest request) {
+        return new ResponseEntity<ErrorResponse>(
+                new ErrorResponse().code(exc.getCode()).message(exc.getErrorMessage()), HttpStatus.UNAUTHORIZED
+        );
+    }
 //
 //    @ExceptionHandler(VideoNotFoundException.class)
 //    public ResponseEntity<ErrorResponse> videonotfoundException(VideoNotFoundException exc, WebRequest request) {
