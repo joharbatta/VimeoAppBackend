@@ -33,7 +33,7 @@ public class SignupController {
         userEntity.setPassword(signupUserRequest.getPassword());
         userEntity.setMobilePhone(signupUserRequest.getMobileNumber());
         userEntity.setSalt("1234abc");
-        userEntity.setRole("nonadmin");
+        userEntity.setRole("admin");
 
         // Calls the signup method of signupBusinessservice with the provided attributes
         final UserEntity createdUserEntity = signupBusinessService.signup(userEntity);
