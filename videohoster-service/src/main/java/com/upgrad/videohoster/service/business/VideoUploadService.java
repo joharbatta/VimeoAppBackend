@@ -14,14 +14,18 @@ public class VideoUploadService {
 
     @Autowired
     private VideoDao videoDao;
-
+    //upload video
     @Transactional(propagation = Propagation.REQUIRED)
     public VideoEntity upload(VideoEntity videoEntity, final String authorizationToken) throws UploadFailedException {
+
+        //getUserAuthToken() in video dao will verify if token exist
         UserAuthTokenEntity userAuthTokenEntity = videoDao.getUserAuthToken(authorizationToken);
         if (userAuthTokenEntity == null) {
+            //exception
             throw new UploadFailedException("UP-001", "User is not Signed in, sign in to upload an video");
         }
         videoEntity.setUser_id(userAuthTokenEntity.getUser());
+        //create video in video dao will persist video entity
         return videoDao.createVideo(videoEntity);
     }
 }

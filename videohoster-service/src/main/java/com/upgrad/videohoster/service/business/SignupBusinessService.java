@@ -18,9 +18,13 @@ public class SignupBusinessService {
 
     @Transactional(propagation = Propagation.REQUIRED)
     public UserEntity signup(UserEntity userEntity) {
+
+        // Encryption of password
         String[] encryptedText = passwordCryptographyProvider.encrypt(userEntity.getPassword());
         userEntity.setSalt(encryptedText[0]);
         userEntity.setPassword(encryptedText[1]);
+
+        // Called userDao to insert new user record in the database
         return userDao.createUser(userEntity);
     }
 }

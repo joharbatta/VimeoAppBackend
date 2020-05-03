@@ -17,7 +17,7 @@ public class AdminService {
 
     @Autowired
     private VideoDao videoDao;
-
+    //getvideo() will return the video entitiy object if video with particluar id exist
     public VideoEntity getVideo(final String videoUuid, final String authorization) throws VideoNotFoundException, UnauthorizedException, UserNotSignedInException {
 
         UserAuthTokenEntity userAuthTokenEntity = videoDao.getUserAuthToken(authorization);

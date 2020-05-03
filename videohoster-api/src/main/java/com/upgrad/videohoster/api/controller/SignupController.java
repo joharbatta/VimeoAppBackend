@@ -19,12 +19,13 @@ public class SignupController {
 
     @Autowired
     private SignupBusinessService signupBusinessService;
-
+    // Signup endpoint requests for all the attributes in “SignupUserRequest” about the user and registers a user successfully.
     @RequestMapping(method = RequestMethod.POST, path = "/usersignup", consumes = MediaType.APPLICATION_JSON_UTF8_VALUE, produces = MediaType.APPLICATION_JSON_UTF8_VALUE)
     public ResponseEntity<SignupUserResponse> userSignup(final SignupUserRequest signupUserRequest) {
 
         final UserEntity userEntity = new UserEntity();
 
+        // Adds all the attributes provided to the userentity
         userEntity.setUuid(UUID.randomUUID().toString());
         userEntity.setFirstName(signupUserRequest.getFirstName());
         userEntity.setLastName(signupUserRequest.getLastName());
@@ -34,8 +35,13 @@ public class SignupController {
         userEntity.setSalt("1234abc");
         userEntity.setRole("nonadmin");
 
+        // Calls the signup method of signupBusinessservice with the provided attributes
         final UserEntity createdUserEntity = signupBusinessService.signup(userEntity);
+
+        // Loads the SignupUserResponse with the uuid of the new user created and the respective status message
         SignupUserResponse userResponse = new SignupUserResponse().id(createdUserEntity.getUuid()).status("USER SUCCESSFULLY REGISTERED");
+
+        // Returns the SignupuserResponse with resource created http status
         return new ResponseEntity<SignupUserResponse>(userResponse, HttpStatus.CREATED);
     }
 }

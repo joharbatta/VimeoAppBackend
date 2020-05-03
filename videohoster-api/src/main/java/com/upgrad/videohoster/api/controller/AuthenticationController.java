@@ -24,12 +24,18 @@ public class AuthenticationController {
     @Autowired
     private AuthenticationService authenticationService;
 
+    // Login endpoint requests for Basic authentication of the user and logs in a user successfully.
     @RequestMapping(method = RequestMethod.POST, path = "/auth/login", produces = MediaType.APPLICATION_JSON_UTF8_VALUE)
     public ResponseEntity<AuthorizedUserResponse> login(@RequestHeader("authorization") final String authorization) throws AuthenticationFailedException {
+
+        // Gets the email:password after base64 decoding
         byte[] decode = Base64.getDecoder().decode(authorization);
         String decodedText = new String(decode);
+
+        // Splits email:password text to seperate array elements
         String[] decodedArray = decodedText.split(":");
 
+        // Authenticates the email and password and gets the user auth token
         UserAuthTokenEntity userAuthToken = authenticationService.authenticate(decodedArray[0], decodedArray[1]);
 
         UserEntity user = userAuthToken.getUser();

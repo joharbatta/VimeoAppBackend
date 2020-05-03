@@ -22,17 +22,20 @@ public class AdminController {
 
     @Autowired
     private AdminService adminService;
-
+    //get video by id
     @RequestMapping(method = RequestMethod.GET, path = "/videos/{id}", produces = MediaType.APPLICATION_JSON_UTF8_VALUE)
     public ResponseEntity<VideoDetailsResponse> getVideo(@PathVariable("id") final String videoUuid, @RequestHeader("authorization") final String authorization) throws VideoNotFoundException, UnauthorizedException, UserNotSignedInException {
 
+        //will send video id and access token to get video() method in adminservice it will return video entity if exist
         final VideoEntity videoEntity = adminService.getVideo(videoUuid, authorization);
 
+        //setting video entity details in details response object
         VideoDetailsResponse videoDetailsResponse = new VideoDetailsResponse().
                 video(videoEntity.getVideo()).id((int) videoEntity.getId())
                 .name(videoEntity.getName()).description(videoEntity.getDescription())
                 .status(videoEntity.getStatus());
 
+        // Returns the VideoDetailsResponse with  http status
         return new ResponseEntity<VideoDetailsResponse>(videoDetailsResponse, HttpStatus.OK);
     }
 

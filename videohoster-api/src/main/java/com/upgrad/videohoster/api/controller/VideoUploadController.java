@@ -24,9 +24,11 @@ public class VideoUploadController {
 
     @Autowired
     private VideoUploadService videoUploadService;
-
+    //video upload
     @RequestMapping(method = RequestMethod.POST, path = "/videoupload", consumes = MediaType.APPLICATION_JSON_UTF8_VALUE, produces = MediaType.APPLICATION_JSON_UTF8_VALUE)
-    public ResponseEntity<VideoUploadResponse> videoupload(final VideoUploadRequest videoUploadRequest, @RequestHeader("authorization") final String authorization) throws UploadFailedException, UnsupportedEncodingException {
+    public ResponseEntity<VideoUploadResponse> videoupload(final VideoUploadRequest videoUploadRequest, @RequestHeader("authorization") final String authorization) throws UploadFailedException{
+
+        // Adds all the attributes provided to the video entity
         final VideoEntity videoEntity = new VideoEntity();
         videoEntity.setVideo(videoUploadRequest.getVideo());
         videoEntity.setName(videoUploadRequest.getName());
@@ -35,8 +37,14 @@ public class VideoUploadController {
         videoEntity.setNo_of_likes(0);
         videoEntity.setCreated_at(ZonedDateTime.now());
         videoEntity.setStatus("REGISTERED");
+
+        // Calls the upload method of videoUploadService with the provided attributes
         final VideoEntity createdvideoEntity = videoUploadService.upload(videoEntity, authorization);
+
+        // Loads the VideoUploadResponse with the uuid of the new user created and the respective status message
         VideoUploadResponse videoUploadResponse = new VideoUploadResponse().id(createdvideoEntity.getUuid()).status("Video Successfully Uploaded");
+
+        // Returns the VideoUploadResponse with resource created http status
         return new ResponseEntity<VideoUploadResponse>(videoUploadResponse, HttpStatus.CREATED);
     }
 }
